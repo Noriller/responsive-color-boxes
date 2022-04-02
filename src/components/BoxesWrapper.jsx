@@ -3,10 +3,10 @@ import './BoxesWrapper.css';
 export function BoxesWrapper() {
   return (
     <div className='wrapper'>
-      <div className='box main'>1</div>
-      <div className='box row3 col6'>2</div>
-      <div className='box row3 col3'>3</div>
-      <div className='box row3 col3'>4</div>
+      <div className='box one'>1</div>
+      <div className='box two'>2</div>
+      <div className='box three'>3</div>
+      <div className='box four'>4</div>
       <div className='box five'>5</div>
       <div className='box six'>6</div>
       <div className='box seven'>7</div>

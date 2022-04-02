@@ -19,4 +19,12 @@ code {
 
 :root {
   --header-height: 5%;
+  font-size: 16px;
+}
+
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  }
 }

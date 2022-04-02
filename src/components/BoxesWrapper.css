@@ -3,9 +3,23 @@
   color: #004d40;
   display: grid;
   font-weight: 800;
+  grid-gap: 0.8rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  grid-gap: 0.8rem;
+  grid-template-areas:
+    'one   one   one    one    one    one    two    two    two    two    two    two'
+    'one   one   one    one    one    one    two    two    two    two    two    two'
+    'one   one   one    one    one    one    two    two    two    two    two    two'
+    'one   one   one    one    one    one    three  three  three  four   four   four'
+    'one   one   one    one    one    one    three  three  three  four   four   four'
+    'one   one   one    one    one    one    three  three  three  four   four   four'
+    'five  five  five   seven  seven  seven  seven  seven  seven  eight  eight  eight'
+    'five  five  five   seven  seven  seven  seven  seven  seven  eight  eight  eight'
+    'six   six   six    seven  seven  seven  seven  seven  seven  eight  eight  eight'
+    'six   six   six    seven  seven  seven  seven  seven  seven  eight  eight  eight'
+    'six   six   six    seven  seven  seven  seven  seven  seven  nine   nine   nine'
+    'six   six   six    seven  seven  seven  seven  seven  seven  nine   nine   nine'
+    ;
   height: calc(100% - var(--header-height));
   padding: 1em;
   text-align: center;
@@ -17,56 +31,62 @@
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: inline-grid;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
-  padding: 20px;
+  padding: 1.5rem;
   text-align: center;
-  width: 100%;
 }
 
-.main {
-  grid-area: main;
-  grid-column: span 6;
-  grid-row: span 6;
+.one {
+  grid-area: one;
 }
 
-.col3 {
-  grid-column: span 3;
+.two {
+  grid-area: two;
 }
 
-.col6 {
-  grid-column: span 6;
+.three {
+  grid-area: three;
 }
 
-.row3 {
-  grid-row: span 3;
-}
-
-.row6 {
-  grid-row: span 6;
+.four {
+  grid-area: four;
 }
 
 .five {
-  grid-column: 1/4;
-  grid-row: 7/9;
+  grid-area: five;
 }
 
 .six {
-  grid-column: 1/4;
-  grid-row: 9/span 4;
+  grid-area: six;
 }
 
 .seven {
-  grid-column: 4/10;
-  grid-row: span 6;
+  grid-area: seven;
 }
 
 .eight {
-  grid-column: 10/span 3;
-  grid-row: 7/span 4;
+  grid-area: eight;
 }
 
 .nine {
-  grid-column: 10/span 3;
-  grid-row: 11/ span 2;
+  grid-area: nine;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      'one one'
+      'three four'
+      'two two'
+      'seven seven'
+      'five eight'
+      'six nine';
+  }
+
+  .box {
+    font-weight: bold;
+  }
 }
