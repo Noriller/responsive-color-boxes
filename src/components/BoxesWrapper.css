@@ -1,3 +1,72 @@
 .wrapper {
-  
+  background-color: #456789;
+  color: #004d40;
+  display: grid;
+  font-weight: 800;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 0.8rem;
+  height: calc(100% - var(--header-height));
+  padding: 1em;
+  text-align: center;
+}
+
+.box {
+  align-content: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: inline-grid;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.main {
+  grid-area: main;
+  grid-column: span 6;
+  grid-row: span 6;
+}
+
+.col3 {
+  grid-column: span 3;
+}
+
+.col6 {
+  grid-column: span 6;
+}
+
+.row3 {
+  grid-row: span 3;
+}
+
+.row6 {
+  grid-row: span 6;
+}
+
+.five {
+  grid-column: 1/4;
+  grid-row: 7/9;
+}
+
+.six {
+  grid-column: 1/4;
+  grid-row: 9/span 4;
+}
+
+.seven {
+  grid-column: 4/10;
+  grid-row: span 6;
+}
+
+.eight {
+  grid-column: 10/span 3;
+  grid-row: 7/span 4;
+}
+
+.nine {
+  grid-column: 10/span 3;
+  grid-row: 11/ span 2;
 }
